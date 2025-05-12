@@ -1,0 +1,212 @@
+@import "normalize";
+
+@import "settings";
+
+.container {
+  padding-inline: min(6.25vw, 120px);
+}
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - min(6.46vw, 124px));
+  margin-top: min(6.46vw, 124px);
+  margin-bottom: min(3.13vw, 60px);
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    align-items: center;
+    flex-direction: column;
+
+    & > hr {
+      width: min(38.54vw, 740px);
+      height: min(.21vw, 4px);
+      margin-bottom: min(1.56vw, 30px);
+      background-color: white;
+    }
+
+    & > p {
+      max-width: min(40.73vw, 782px);
+      font-size: min(1.46vw, 28px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    width: min(9.69vw, 186px);
+    height: min(3.13vw, 60px);
+    margin-top: min(7.34vw, 141px);
+    margin-bottom: min(2.50vw, 48px);
+    background-image: url(../img/hero_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    object-fit: cover;
+  }
+
+  & h1 {
+    margin-bottom: min(1.04vw, 20px);
+    font-family: "Benzin";
+    font-size: min(6.25vw, 120px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: min(6.25vw, 120px); /* 100% */
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+    & > div {
+      font-family: "Benzin";
+      font-size: min(3.13vw, 60px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: min(3.13vw, 60px); /* 100% */
+    }
+  }
+}
+
+.about {
+  margin-bottom: min(3.13vw, 60px);
+
+  &__container {
+    justify-content: space-between;
+
+    & > p {
+      max-width: min(57.97vw, 1113px);
+      font-size: min(1.46vw, 28px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+      color: #000000;
+    }
+
+    & > div:has(h2) {
+      display: flex;
+      flex-direction: column;
+
+      & > hr {
+        width: min(12.81vw, 246px);
+        height: min(.31vw, 6px);
+        background-color: #b91827;
+      }
+
+      & > h2 {
+        margin-bottom: min(.52vw, 10px);
+        font-size: min(1.98vw, 38px);
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        color: #000000;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.month {
+  overflow: hidden;
+  align-items: center;
+  height: min(4.79vw, 92px);
+  margin-bottom: min(3.23vw, 62px);
+  background: linear-gradient(90deg, #004602 0%, #5f7e4c 100%);
+}
+
+.run {
+  &__anim1 {
+    animation: run 60s linear infinite ;
+  }
+
+  &__anim2 {
+    transition-delay: 60s;
+    animation: run2 60s linear infinite ;
+  }
+
+  &__content {
+    align-items: center;
+    font-family: "Benzin";
+    font-size: min(4.17vw, 80px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: min(4.17vw, 80px);
+    color: #ffffff;
+    text-transform: uppercase;
+
+    & svg {
+      display: block;
+      width: min(1.30vw, 25px);
+      height: min(1.30vw, 25px);
+
+      margin-inline: min(2.08vw, 40px);
+    }
+  }
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes run2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.now {
+  &__item {
+    border-radius: min(.52vw, 10px);
+    background-color: white;
+  }
+
+  &__picBlock {
+    width: min(28.44vw, 546px);
+    height: min(27.29vw, 524px);
+
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: min(.52vw, 10px) min(.52vw, 10px) 0 0;
+
+      object-fit: cover;
+    }
+  }
+
+  &__infoBlock {
+    padding: min(1.56vw, 30px);
+  }
+
+  & h3 {
+    margin-bottom: min(.52vw, 10px);
+    font-family: "Benzin";
+    font-size: min(1.25vw, 24px);
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    color: #141414;
+  }
+
+  &__descr {
+    font-size: min(.94vw, 18px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+  }
+}
